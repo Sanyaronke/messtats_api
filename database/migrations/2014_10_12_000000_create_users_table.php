@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->boolean('sexe');
             $table->date('birthday');
-            $table->string('size')->nullable();
+            $table->integer('size')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
