@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
     </head>
     <body >
-    <div id="app"></div>
+    <div class="container-fluid p-0 m-0" id="app"></div>
     <script src="{{asset('js/app.js')}}"></script>
     </body>
 </html>
