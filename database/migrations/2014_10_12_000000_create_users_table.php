@@ -15,11 +15,18 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+//            $table->foreignId('team_id');
+            $table->string('name')->unique();
+            $table->string('team_name')->unique();
+            $table->string('matricule')->nullable();
+            $table->bigInteger('parent_id')->nullable();
+            $table->string('post')->nullable();
+            $table->string('num_short')->nullable();
             $table->boolean('sexe');
             $table->date('birthday');
             $table->integer('size')->nullable();
             $table->string('email')->unique();
+//            $table->boolean('is_direct_member')->default(true);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
